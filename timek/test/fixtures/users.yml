@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  friends_id: 
+  walled: MyString
+  references: MyString
+  name: MyString
+  password: MyString
+  schedules_id: 
+  circles_id: 
+
+two:
+  friends_id: 
+  walled: MyString
+  references: MyString
+  name: MyString
+  password: MyString
+  schedules_id: 
+  circles_id: 

@@ -1,1 +1,19 @@
-<h2>Home</h2>
+<h1>Home</h1>
+<h2>Welcome, <%= session[:user_id] %> </h2>
+
+  <% @users.each do |u| %>
+    <tr>
+      <td><hr>email: <%= u.email %></td><br/>
+      <td>name: <%= u.name %></td><br/>
+      <td>pass: (hidden or bugged? who knows)<%= u.password %></td><br/>
+      <td><%= link_to 'Destroy', user_path(u), method: :delete %><hr></td>
+      <br/>
+    </tr>
+  <% end %>
+
+
+<%= link_to "settings", "settings" %>
+<%= link_to "friends", "friends" %>
+<%= link_to "login", "login" %>
+<%= link_to "logout", "logout" %>
+<%= link_to "register", "signup" %>

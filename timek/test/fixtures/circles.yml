@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  host_id: 
+  name: MyString
+  description: MyText
+  members_id: 
+
+two:
+  host_id: 
+  name: MyString
+  description: MyText
+  members_id: 

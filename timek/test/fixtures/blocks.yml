@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 
+  schedule_id: 
+  time_start: 1
+  duration_mins: 1
+  name: MyString
+  description: MyText
+  permitted_circles_id: 
+
+two:
+  owner_id: 
+  schedule_id: 
+  time_start: 1
+  duration_mins: 1
+  name: MyString
+  description: MyText
+  permitted_circles_id: 

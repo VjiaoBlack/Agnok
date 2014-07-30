@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
-  def welcome
-  end
-
   def index
+    @users = User.all
+    @session = session
   end
 end

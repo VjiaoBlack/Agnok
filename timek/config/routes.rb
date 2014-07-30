@@ -1,14 +1,23 @@
 Rails.application.routes.draw do
-  get 'home/welcome'
+
+
+
+
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root to: "home#welcome"
 
-  resources :home
-  resources :friends
-  resources :settings
+
+  root to: "home#index"
+  get '/settings', to: 'settings#index'
+  get '/friends', to: 'friends#index'
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  post 'login', to: 'sessions#create'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
