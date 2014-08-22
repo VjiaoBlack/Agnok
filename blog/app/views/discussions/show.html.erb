@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <h1><%= @discussion.name %></h1>
+    <h3><%= @discussion.description %> </h3>
+    <hr/>
+    <p>This is going to be the list of comments!</p>
+    </br>
+        <% @comments.each do |comment| %>
+            <hr>
+            <h3>User id: <%= comment.user_id %></h3>
+            <p>Body: <%= comment.body %></p>
+            <hr>
+        <% end %>
+    <h3><%= link_to "Write a Comment!", new_comment_path(discussion_id: @discussion.id) %></h3>
+</body>
+</html>

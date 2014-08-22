@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   # following line enables /welcome/index
   # get 'welcome/index'
 
-  resources :posts do
-    resources :comments
-  end
+  resources :forums
+  resources :categories
+  resources :topics
+  resources :discussions
+  resources :comments
 
 
 

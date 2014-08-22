@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <p>This is going to be the list of forums!</p>
+    </br>
+    <% @forums.each do |forum| %>
+        <hr>
+        <h3><%= link_to forum.name, forum_path(id: forum.id) %></h3>
+        <p><%= forum.description %></p>
+        <hr>
+    <% end %>
+
+    <h3><%= link_to "Create a Forum!", new_forum_path %></h3>
+</body>
+</html>

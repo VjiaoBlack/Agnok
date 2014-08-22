@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <h1><%= @topic.name %></h1>
+    <h3><%= @topic.description %> </h3>
+    <hr/>
+    <p>This is going to be the list of Discussions (threads)!</p>
+    </br>
+        <% @discussions.each do |discussion| %>
+            <hr>
+            <h3><%= link_to discussion.name, discussion_path(id: discussion.id) %></h3>
+            <p><%= discussion.description %></p>
+            <hr>
+        <% end %>
+    <h3><%= link_to "Create a Discussion (thread)!", new_discussion_path(topic_id: @topic.id) %></h3>
+</body>
+</html>

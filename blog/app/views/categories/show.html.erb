@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <h1><%= @category.name %></h1>
+    <h3><%= @category.description %> </h3>
+    <hr/>
+    <p>This is going to be the list of topics!</p>
+    </br>
+        <% @topics.each do |topic| %>
+            <hr>
+            <h3><%= link_to topic.name, topic_path(id: topic.id) %></h3>
+            <p><%= topic.description %></p>
+            <hr>
+        <% end %>
+    <h3><%= link_to "Create a Topic!", new_topic_path(category_id: @category.id) %></h3>
+
+</body>
+</html>
