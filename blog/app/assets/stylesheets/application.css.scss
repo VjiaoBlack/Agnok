@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6, h1 * {
 
 h1 {
     font-size: 48px;
+    margin-bottom: 0px;
 }
 
 p, form, input {
@@ -102,6 +103,10 @@ input[type="submit"] {
     background-color: rgba($shine, .7);
     margin-bottom: 40px;
     margin-top: 20px;
+}
+
+#head {
+    padding-bottom: 10px;
 }
 
 #body {
