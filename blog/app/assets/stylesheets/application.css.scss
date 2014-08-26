@@ -11,33 +11,95 @@
  * file per style scope.
  *
  *= require_tree .
- *= requ    ire_self
+
  */
+
+@font-face {
+    font-family: "LeagueGothic";
+    src: font_url('LeagueGothic-Regular.otf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rosario';
+    src: font_url('Rosario-Regular.ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$dark:      #754;
+$light:     #deb;
+$shine:     #efe;
+$shadow:    #732;
+$emphasis:  #B60;
+$bold:      #adb;
 
 body {
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: $light;
 }
 
 a {
-    color: rgb(230,150,230);
+    color: $emphasis;
     text-decoration: none;
+    font-family: "Rosario";
 }
 
-h1, h2, h3, h4, h5, h6, p {
+a:hover {
+    color: $shadow;
+}
+
+h1, h2, h3, h4, h5, h6, h1 * {
     margin-top: 0px;
-    color: white;
-    font-family: sans-serif;
+    color: $shadow;
+    font-family: "LeagueGothic";
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p, form, input {
+    font-family: "Rosario";
+    color: $shadow;
+}
+
+
+
+input[type="submit"] {
+    background-color: $shine;
+    border-width: 1px;
+    border-color: $bold;
+    box-shadow: 0 0 0;
+}
+
+
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: #5;
+    background-image: image-url("Boardwalk.jpg");
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    opacity: .5;
 }
 
 #head, #body {
     margin: auto;
     width: 70%;
     min-width: 30em;
-    background-color: rgb(50,100,50);
+    background-color: rgba($shine, .7);
     margin-bottom: 40px;
     margin-top: 20px;
 }
@@ -62,17 +124,4 @@ h1, h2, h3, h4, h5, h6, p {
 #login, #register, #logout{
     float: right;
     margin-left: 20px;
-}
-
-#bg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
-    background-image: image-url("Background.gif");
-    background-size: repeat;
-    /*-webkit-filter: brightness(50%);*/
 }
