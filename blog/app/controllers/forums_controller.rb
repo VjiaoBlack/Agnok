@@ -13,7 +13,7 @@ class ForumsController < ApplicationController
     end
 
     def create
-        @forum = Forum.new(forum_params)
+        @forum = Forum.new(params[:forum])
 
         @forum.save
         redirect_to forums_path

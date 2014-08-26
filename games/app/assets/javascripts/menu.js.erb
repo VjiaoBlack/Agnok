@@ -1,0 +1,106 @@
+
+
+// window.onload = fadeInGame; // change to menuloop later
+
+// function menuLoop() {
+
+//     window.width = $(window).width();
+//     window.height = $(window).height();
+
+//     window.game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+
+//     function preload() {
+
+//     }
+
+
+
+//     function create() {
+//         fadeInIntro();
+//         // var text = new Text(game, 10, 10, "Two | Worlds");
+//         this.game.add.text(525, 10, "Two | Worlds", { font: "64px Kubasta", fill: "rgba(0,255,255,1)"} );
+//         button = game.add.button(525, 300, 'asfd', fadeOutIntro, this);
+
+//         this.game.add.text(525,280,"Game", {font: "64px Kubasta", fill: "white"});
+
+//     }
+
+//     function update() {
+//         resizeGame();
+
+//     }
+
+
+// }
+
+// function resizeGame() {
+//     if ($(window).width() != width) {
+//         width = $(window).width();
+//         game.width = width;
+//         game.height = height;
+//         game.stage.bounds.width = width;
+//         game.stage.bounds.height = height;
+
+//         game.renderer.resize(800, 600);
+//     }
+//     if ($(window).height() != height) {
+//         width = $(window).width();
+//         game.width = width;
+//         game.height = height;
+//         game.stage.bounds.width = width;
+//         game.stage.bounds.height = height;
+
+//         game.renderer.resize(800, 600);
+//     }
+// }
+
+// function fadeInIntro() {
+//     console.log("fadeout initiated");
+//     window.x = 0;
+//     var menuFade = setInterval(function() {
+//         window.x += 0.01;
+//         document.getElementsByTagName("canvas")[0].style.opacity = x;
+
+//         if (window.x > 1) {
+//             clearInterval(menuFade);
+//         }
+
+//     },8);
+
+// }
+
+// function fadeOutIntro() {
+//     console.log("fadeout initiated");
+//     window.x = 1;
+//     var menuFade = setInterval(function() {
+//         window.x -= 0.01;
+//         document.getElementsByTagName("canvas")[0].style.opacity = x;
+
+//         if (window.x < 0) {
+//             window.game = null;
+//             elements = document.getElementsByTagName("canvas")
+//             elements[0].parentNode.removeChild(elements[0]);
+//             fadeInGame();
+//             clearInterval(menuFade);
+//         }
+
+//     },8);
+
+// }
+
+// function fadeInGame() {
+//     window.x = 0;
+//     console.log("fadein initiated");
+//     gameLoop();
+
+//     var gameFadeIn = setInterval(function() {
+//         window.x += 0.01;
+//         document.getElementsByTagName("canvas")[0].style.opacity = x;
+
+//         if (window.x > 1) {
+//             clearInterval(gameFadeIn);
+//         }
+
+//     })
+// }

@@ -3,4 +3,7 @@ class Discussion < ActiveRecord::Base
 
     has_many :comments
     has_many :users, through: :comment
+
+    attr_accessible :name, :description
+
 end

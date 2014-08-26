@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 
         @discussion = Discussion.find(params[:discussion_id])
         @comment = @discussion.comments.create(comment_params)
-        @comment.user_id = 1;
+        @comment.user_id = session[:user_id];
         @comment.body = params[:comment][:body]
         # do something with sessions here
 

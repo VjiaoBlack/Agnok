@@ -2,8 +2,7 @@
 <head>
 </head>
 <body>
-    <p>This is going to be the list of forums!</p>
-    </br>
+    <h1> List of forums: </h1>
     <% @forums.each do |forum| %>
         <hr>
         <h3><%= link_to forum.name, forum_path(id: forum.id) %></h3>
@@ -11,6 +10,10 @@
         <hr>
     <% end %>
 
+
+        <% if session[:user_id] %>
+
     <h3><%= link_to "Create a Forum!", new_forum_path %></h3>
+    <% end %>
 </body>
 </html>

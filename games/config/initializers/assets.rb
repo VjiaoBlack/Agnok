@@ -4,6 +4,7 @@
 Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
-Rails.application.config.assets.precompile += %w( physics.js )
+Rails.application.config.assets.precompile += %w( game.js )
+Rails.application.config.assets.precompile += %w( menu.js )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )

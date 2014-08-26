@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   resources :discussions
   resources :comments
 
+  resources :sessions
+  post 'sessions/new', to: 'sessions#create'
+  get 'log_out' => 'sessions#destroy', :as => "log_out"
+
+  resources :users
 
 
 

@@ -6,9 +6,38 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+  <div id="bg"></div>
+
+  <div id="head">
+    <div id="head-content">
+        <div id="title">
+            <h1>Victor's Site of Forums</h1>
+        </div>
+
+
+        <% if session[:user_id] %>
+        <h2>Welcome, <%= User.find(session[:user_id])[:name] %>!</h2>
+        <% end %>
+
+        <div id="login">
+            <%= link_to "Log In", new_session_path %>
+        </div>
+        <div id="register">
+            <%= link_to "Register", new_user_path %>
+        </div>
+        <div id="logout">
+            <%= link_to "Log Out", "/log_out" %>
+        </div>
+    </div>
+  </div>
+
+  <div id="body">
+    <div id="body-content">
+        <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

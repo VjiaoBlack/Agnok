@@ -1,9 +1,27 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+    font-family: 'Kubasta';
+    src: font_path('Kubasta.ttf') format('truetype');
 
-html {
+    font-weight: normal;
+    font-style: normal;
+}
+
+canvas {
+    /*opacity:0;*/
+}
+
+
+body {
     padding: 0px;
     margin: 0px;
+    background-color: black;
+}
 
+p {
+    font-family: 'Kubasta';
+    font-size: 100px;
+    color: white;
 }

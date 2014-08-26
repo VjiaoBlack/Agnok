@@ -2,10 +2,8 @@
 <head>
 </head>
 <body>
-    <h1><%= @category.name %></h1>
+    <h1>Category: <%= @category.name %></h1>
     <h3><%= @category.description %> </h3>
-    <hr/>
-    <p>This is going to be the list of topics!</p>
     </br>
         <% @topics.each do |topic| %>
             <hr>
@@ -13,7 +11,11 @@
             <p><%= topic.description %></p>
             <hr>
         <% end %>
-    <h3><%= link_to "Create a Topic!", new_topic_path(category_id: @category.id) %></h3>
 
+        <% if session[:user_id] %>
+
+    <h3><%= link_to "Create a Topic!", new_topic_path(category_id: @category.id) %></h3>
+<% end %>
+    <%= link_to "Back", forum_path %>
 </body>
 </html>
