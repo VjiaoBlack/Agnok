@@ -15,6 +15,16 @@ class CategoriesController < ApplicationController
         redirect_to forum_path(@forum)
     end
 
+    def destroy
+        @category = Category.find(params[:id])
+        @topics = @category.topics
+        @topics.each do |topic|
+            topic.destroy
+        end
+        @category.destroy
+        redirect_to forum_path(params[:forum_id])
+    end
+
     private
         def category_params
             params.require(:category).permit(:name,:description)

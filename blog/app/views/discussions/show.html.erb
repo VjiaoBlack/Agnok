@@ -9,7 +9,11 @@
             <hr>
             <h3>Author: <%= User.find(comment.user_id)[:name]%></h3>
             <p>Body: <%= comment.body %></p>
-            <hr>
+            <% if session[:user_id] == comment.user_id %>
+                <%= link_to "Delete", comment_path(comment, discussion_id: @discussion.id), method: :delete %>
+            <% end %>
+            <hr/>
+
         <% end %>
 
         <% if session[:user_id] %>

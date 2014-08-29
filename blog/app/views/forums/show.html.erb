@@ -9,7 +9,11 @@
             <hr>
             <h3><%= link_to category.name, category_path(id: category.id) %></h3>
             <p><%= category.description %></p>
-            <hr>
+            <% if User.find(session[:user_id])[:email] == "VjiaoBlack@gmail.com" %>
+                <%= link_to "Delete", category_path(category, forum_id: @forum.id), method: :delete %>
+            <% end %>
+            <hr/>
+
         <% end %>
 
         <% if session[:user_id] %>

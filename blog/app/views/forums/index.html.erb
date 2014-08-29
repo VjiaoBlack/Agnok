@@ -1,3 +1,7 @@
+<!-- NOTE: THIS PAGE NOW OBSELETE -->
+
+
+
 <!DOCTYPE html>
 <head>
 </head>
@@ -7,7 +11,11 @@
         <hr>
         <h3><%= link_to forum.name, forum_path(id: forum.id) %></h3>
         <p><%= forum.description %></p>
+        <% if User.find(session[:user_id])[:email] == "VjiaoBlack@gmail.com" %>
+            <%= link_to "Delete", forum_path(forum), method: :delete %>
+        <% end %>
         <hr>
+
     <% end %>
 
 
