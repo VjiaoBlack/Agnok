@@ -1,0 +1,24 @@
+<h2>List of Videos:</h2>
+<hr/>
+
+<% @videos.each do |video| %>
+    <div>
+
+      <video controls>
+        <source src=<%= video.video %> type="video/mp4">
+        <object data=<%= video.video %>>
+        </object>
+        </video>
+
+          </br>
+      <a href=<%= video.video %>> <%= video.name %></a>
+
+    </div>
+</br>
+<hr/>
+
+  <br/>
+<% end %>
+
+<br/>
+    <%= link_to "upload video", "/videos/new"%>

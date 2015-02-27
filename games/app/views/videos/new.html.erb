@@ -1,0 +1,27 @@
+
+<!doctype HTML>
+<head>
+    <title>iBoard</title>
+</head>
+<body>
+    <%= form_for(@video) do |v| %>
+        <div class="field">
+          <%= v.label :video %><br />
+          <%= v.file_field :video %>
+        </div>
+
+        <div class="field">
+            <%= v.label :name %>
+            <%= v.text_field :name %>
+          </div>
+
+        <div class="actions">
+            <%= v.submit 'upload a video!' %>
+        </div>
+    <% end %>
+</br>
+
+
+    <%= link_to "View All Videos", "/videos"%>
+</body>
+</html>
